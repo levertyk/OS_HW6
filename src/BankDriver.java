@@ -1,3 +1,4 @@
+
 import java.io.File;
 
 import java.io.FileNotFoundException;
@@ -7,7 +8,6 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class BankDriver {
-	int count = 0;
 
 	public static void main(String[] args) throws FileNotFoundException {
 		/*
@@ -19,7 +19,7 @@ public class BankDriver {
 		// reading the info from the file and storing in the arrayList
 		long currentRec = 0;
 		System.out.println("Reading the file \"accounts.txt\" ");
-		Scanner inFile = new Scanner(new File("/accounts.txt"));
+		Scanner inFile = new Scanner(new File("accounts.txt"));
 		while (inFile.hasNext()) { // while 2
 			String currID = inFile.nextLine();
 			double currBalance = inFile.nextDouble();
@@ -55,13 +55,9 @@ public class BankDriver {
 		int count = 0;
 		for (int i = 0; i < myList.size(); ++i)
 			if (myList.get(i).getBalance() < 1000)
-				incrementCounter();
+				++count;
 		return count;
 	};
-
-	static synchronized void incrementCounter() {
-		count++;
-	}
 
 	static void createAccountsFile(int count) throws FileNotFoundException {
 		File accountsFile = new File("accounts.txt");
