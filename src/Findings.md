@@ -4,7 +4,6 @@
 
 Based on the above findings, it can be observed that the multithreaded version of the code (parallel run) is faster than the sequential version (sequential run) in terms of execution time, as it completed the task in 57 milliseconds compared to 93 milliseconds in the sequential version. This indicates that utilizing multiple threads for parallel processing can lead to improved performance and reduced execution time in certain scenarios.
 
-
 CPP:
 Sequential run took 86 milliseconds.
 Multithreaded run took 35 milliseconds.
